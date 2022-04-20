@@ -1,0 +1,124 @@
+@import "reset";
+@import "color";
+
+#stock {
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid $border-color-tableHeader;
+    border-collapse: collapse;
+    width: 100%;
+    color: #ccc;
+    font-size: 11px;
+
+    tr {
+      background-color: $background-color-tableData;
+      &:hover {
+        background-color: $hover-color-row;
+        cursor: pointer;
+      }
+      th {
+        padding: 5px;
+        border: 1px solid $border-color-tableHeader;
+        background-color: $background-color-tableHeader;
+      }
+      td {
+        padding: 5px;
+        font-size: 13px;
+        color: $text-color-normal;
+        border: 1px solid $border-color-tableBody;
+        &:nth-child(n + 2) {
+          text-align: right;
+        }
+      }
+    }
+    #nameRow {
+      position: relative;
+      #namePopUp {
+        display: none;
+      }
+      &:hover {
+        #namePopUp {
+          width: 90%;
+          display: block;
+          position: absolute;
+          z-index: 2;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: $background-color-popUp;
+          div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              margin-right: 10px;
+            }
+          }
+          table {
+            margin-top: 10px;
+            background-color: $background-color-popUp;
+            tr {
+              background-color: $background-color-popUp;
+              th {
+                background-color: $background-color-popUp;
+              }
+              &:nth-child(n + 2) {
+                th {
+                  text-align: left;
+                }
+              }
+              &:first-child {
+                th {
+                  border: none;
+                  i {
+                    display: block;
+                    font-size: 9px;
+                  }
+                  &:first-child {
+                    text-align: left;
+                  }
+                  &:nth-child(n + 2) {
+                    text-align: right;
+                  }
+                }
+              }
+              &:last-child {
+                th {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tableUpHeader {
+      th {
+        &:first-child {
+          width: 40%;
+          text-align: left;
+        }
+        &:nth-child(n + 2) {
+          width: 8%;
+          text-align: right;
+        }
+        &:nth-child(5) {
+          width: 36%;
+          text-align: center;
+        }
+      }
+    }
+    .tableDownHeader {
+      th {
+        width: 12%;
+        text-align: right;
+        &:first-child {
+          width: 12%;
+        }
+        i {
+          display: block;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}
