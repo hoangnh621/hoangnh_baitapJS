@@ -9,6 +9,11 @@
     width: 100%;
     color: #ccc;
     font-size: 11px;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
 
     tr {
       background-color: $background-color-tableData;

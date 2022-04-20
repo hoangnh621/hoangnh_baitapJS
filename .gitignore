@@ -1,6 +1,5 @@
-# node_modules/
-# build/
-# *.json
-# webpack.config.js
-# .editorconfig
+node_modules/
+build/
+
+
 
